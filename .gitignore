@@ -1,0 +1,7 @@
+*.pyc
+.idea
+.svn
+test
+log.txt
+config.py
+__init__.py
