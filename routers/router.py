@@ -5,13 +5,13 @@ import tornado.web
 import tornado.httpclient
 import tornado.gen
 
-from api import Recommend
+#from api import Recommend
 from api import Test
 
 class Router(tornado.web.Application):
     handlers=[
-            (r"/related", Recommend.Index),
-            (r"/personal", Recommend.Personalized),
+            #(r"/related", Recommend.Index),
+            #(r"/personal", Recommend.Personalized),
             (r"/test", Test.Index),
         ]
     settings = {
