@@ -1,1 +1,1 @@
-docker run -itd --name tornado -p 8080:8080 -v /Users/zhangpengzhong/code/python/caijing:/data/caijing dockerhub.datagrand.com/global/centos:7.2.1511
+docker run -itd --name tornado -p 8080:8080 -v ~/code/python/caijing:/data/caijing dockerhub.datagrand.com/global/tornado:18.01.23.1445

@@ -14,7 +14,7 @@ class LOG:
                         BROKER_URL='redis://:rec@localhost:6379/0',
                         CELERY_IMPORTS=('wlog',),
                         CELERY_ROUTES={'wlog.write_log': {'queue': 'wlog'},
-                                       # 'worker.error_handler': {'queue': 'error'}
+                                       # 'worker.error_handler': {'logqueue': 'error'}
                                        },
                         CELERY_TASK_SERIALIZER='json',
                         CELERY_RESULT_SERIALIZER = 'json',

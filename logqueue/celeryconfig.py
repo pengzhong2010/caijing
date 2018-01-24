@@ -10,8 +10,8 @@ CELERY_IMPORTS = ('wlog', )
 # 默认为1次/秒的任务
 # CELERY_ANNOTATIONS = {'logx.divide': {'rate_limit': '1/s'}}
 
-CELERY_ROUTES = {'wlog.write_log': {'queue': 'wlog'},
-                 # 'worker.error_handler': {'queue': 'error'}
+CELERY_ROUTES = {'wlog.write_log': {'logqueue': 'wlog'},
+                 # 'worker.error_handler': {'logqueue': 'error'}
                  }
 
 # 默认所有格式为 json

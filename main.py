@@ -15,7 +15,7 @@ from routers import router
 
 
 from tornado.options import define, options
-define("port", default=8000, help="run on the given port", type=int)
+define("port", default=8080, help="run on the given port", type=int)
 
 
 
@@ -23,5 +23,7 @@ if __name__ == "__main__":
     tornado.options.parse_command_line()
     app = router.Router()
     http_server = tornado.httpserver.HTTPServer(app)
-    http_server.listen(options.port)
+    #http_server.listen(options.port)
+    http_server.bind(options.port)
+    http_server.start(0)
     tornado.ioloop.IOLoop.instance().start()
